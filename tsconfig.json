@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
     "target": "es5",
+    // included TS libraries
+    // -> influences which kind of types are know out of the box by your TS code
     "lib": [
-      "dom",
+      "dom", // default DOM types
       "dom.iterable",
       "esnext"
     ],
+    // also plain JS files allowed in project
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    // strictest possible settings for TS -> all types have to be explicitly defined in places where TS can't infer types
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
@@ -20,7 +24,5 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": [
-    "src"
-  ]
+  "include": ["src"]
 }
